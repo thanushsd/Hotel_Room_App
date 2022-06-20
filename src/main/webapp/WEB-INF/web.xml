@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Hotel</display-name>
+  
+<!-- SMTP settings -->
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>port</param-name>
+        <param-value>465</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>blueedge.lk@gmail.com</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>blueedge1000</param-value>
+    </context-param>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>register</servlet-name>
+  <servlet-class>in.hotel.controller.UserController</servlet-class>
+ </servlet>
+  
+  <servlet-mapping>
+   <servlet-name>register</servlet-name>
+   <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>log</servlet-name>
+  <servlet-class>in.hotel.controller.LoginController</servlet-class>
+ </servlet>
+  
+  <servlet-mapping>
+   <servlet-name>log</servlet-name>
+   <url-pattern>/log</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>book</servlet-name>
+  <servlet-class>in.hotel.controller.BookingController</servlet-class>
+ </servlet>
+  
+  <servlet-mapping>
+   <servlet-name>book</servlet-name>
+   <url-pattern>/book</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
